@@ -45,7 +45,7 @@ function activate(context) {
 			var lines = ["# " + selectedMonth + "\n"]
 
 			for (var i = 0; i < numDays; i++) { 
-				lines.push("[[" + year + "-" + pad((selectedMonthIdx + 1), 2) + "-" + pad((i + 1), 2) + "]]")
+				lines.push("- [[" + year + "-" + pad((selectedMonthIdx + 1), 2) + "-" + pad((i + 1), 2) + "]]")
 			}
 
 			let snippet = new vscode.SnippetString(lines.join("\n"))
