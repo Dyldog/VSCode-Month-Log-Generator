@@ -42,7 +42,10 @@ function activate(context) {
 
 			var numDays = new Date(year, selectedMonthIdx, 0).getDate();
 
-			var lines = ["# " + selectedMonth + "\n"]
+			var lines = [
+				"# " + selectedMonth + " " + year + "\n",
+				"Year: [[" + year + "]]\n"
+			]
 
 			for (var i = 0; i < numDays; i++) { 
 				lines.push("- [[" + year + "-" + pad((selectedMonthIdx + 1), 2) + "-" + pad((i + 1), 2) + "]]")
